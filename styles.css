@@ -1,0 +1,279 @@
+:root {
+  --navy: #041f35;
+  --teal: #19d7e7;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, .52);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--navy);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--white);
+  background-image: url("assets/griffin-center.jpg");
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(2, 16, 30, .12), rgba(2, 16, 30, .38) 50%, rgba(2, 16, 30, .92) 100%),
+    linear-gradient(to right, rgba(2, 16, 30, .38), rgba(2, 16, 30, .05), rgba(2, 16, 30, .45));
+  z-index: 0;
+}
+
+.headline {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: clamp(1.4rem, 3vw, 3rem) 1rem 0;
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: clamp(1.15rem, 2.8vw, 2.4rem);
+  font-weight: 900;
+  text-shadow: 0 4px 15px var(--shadow);
+}
+
+h1 {
+  margin: .1rem auto;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: clamp(3rem, 8vw, 7.2rem);
+  line-height: .92;
+  font-weight: 900;
+  text-shadow: 0 6px 20px var(--shadow);
+}
+
+.tagline {
+  margin: .6rem auto 1.4rem;
+  color: var(--teal);
+  font-size: clamp(1.15rem, 2.4vw, 2.25rem);
+  font-style: italic;
+  text-shadow: 0 4px 14px var(--shadow);
+}
+
+.countdown-title {
+  margin: 0 0 .85rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 900;
+  font-size: clamp(1rem, 2.2vw, 2rem);
+  text-shadow: 0 4px 14px var(--shadow);
+}
+
+.countdown-card {
+  width: min(52rem, 74vw);
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 1.8rem);
+  border-radius: 1.6rem;
+  background: rgba(4,31,53,.96);
+  border: 3px solid rgba(25,215,231,.9);
+  box-shadow: 0 16px 40px rgba(0,0,0,.52);
+}
+
+.days {
+  font-size: clamp(5rem, 14vw, 12rem);
+  font-weight: 900;
+  line-height: .82;
+  letter-spacing: .03em;
+}
+
+.days-label {
+  margin-top: .4rem;
+  color: var(--teal);
+  font-size: clamp(1.3rem, 3vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.campus-people {
+  position: relative;
+  z-index: 1;
+  min-height: 23rem;
+}
+
+.group {
+  position: absolute;
+  filter: drop-shadow(0 12px 16px rgba(0,0,0,.5));
+}
+
+.group-table { left: 4%; bottom: 2.8rem; width: 24rem; height: 13rem; }
+.group-professors { left: 39%; bottom: 8rem; width: 14rem; height: 10rem; }
+.group-laptop { left: 58%; bottom: 4.8rem; width: 13rem; height: 12rem; }
+.group-football { right: 4%; bottom: 5.8rem; width: 20rem; height: 12rem; }
+
+.head {
+  position: absolute;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  top: 0;
+  left: 1rem;
+  background: #c98b61;
+}
+
+.hair {
+  position: absolute;
+  width: 2.7rem;
+  height: 1.4rem;
+  top: -.2rem;
+  left: .75rem;
+  background: #251710;
+  border-radius: 2rem 2rem .8rem .8rem;
+}
+
+.body {
+  position: absolute;
+  width: 4.1rem;
+  height: 5.1rem;
+  top: 2rem;
+  left: 0;
+  border-radius: 1rem 1rem .35rem .35rem;
+  background: #28728f;
+}
+
+.wheelchair-student { position: absolute; left: 1rem; bottom: 2.3rem; }
+.wheelchair-student .wheel {
+  position: absolute;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: .45rem solid #111;
+  border-radius: 50%;
+  left: -.9rem;
+  top: 5.8rem;
+}
+.wheelchair-student .body { background: #477d9a; }
+
+.table {
+  position: absolute;
+  left: 2rem;
+  bottom: 2.2rem;
+  width: 17rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #5b4a3d;
+  border: .25rem solid #2e241e;
+}
+
+.paper {
+  position: absolute;
+  left: 5.2rem;
+  bottom: 5.1rem;
+  width: 4.2rem;
+  height: 2.3rem;
+  background: #f3e9cc;
+  transform: rotate(-4deg);
+  border-radius: .2rem;
+}
+
+.computer, .laptop {
+  position: absolute;
+  background: #111a24;
+  border-radius: .25rem;
+  transform: skew(-8deg);
+}
+.computer { left: 10.2rem; bottom: 5.1rem; width: 4.5rem; height: 3rem; }
+
+.student-seated { position: absolute; left: 13rem; bottom: 5.2rem; transform: scale(.9); }
+.student-seated .head { background: #c98f68; }
+.student-seated .body { background: #0d4066; }
+
+.professor { position: absolute; }
+.professor-one { left: 0; bottom: 0; }
+.professor-two { left: 6rem; bottom: 0; }
+.professor .hair { background: #d7d1c8; }
+.professor .body { background: #475b35; height: 4.7rem; }
+.professor-two .body { background: #6c5541; }
+.coffee {
+  position: absolute;
+  width: 1rem;
+  height: 1.1rem;
+  top: 3.6rem;
+  left: 3.2rem;
+  background: #f7f1df;
+  border-radius: .25rem;
+}
+
+.student-laptop { position: absolute; left: 4rem; bottom: 2rem; transform: scale(1.1); }
+.student-laptop .head { background: #f0c2a1; }
+.student-laptop .hair { background: #f0d06f; width: 3rem; height: 2.35rem; border-radius: 2rem; left: .6rem; }
+.student-laptop .body { background: #f4f0e5; }
+.laptop { left: 3.9rem; bottom: 1.2rem; width: 4.8rem; height: 2.9rem; }
+
+.player { position: absolute; }
+.player-left { left: 1rem; top: 1rem; }
+.player-right { right: 1rem; top: 2.4rem; transform: scaleX(-1); }
+.player .head { background: #d1a17b; }
+.player .hair { background: #b7834a; }
+.player .body { background: #426c3b; }
+.player-right .body { background: #8c96a3; }
+
+.football {
+  position: absolute;
+  left: 9rem;
+  top: 3.6rem;
+  width: 3.1rem;
+  height: 1.7rem;
+  background: #6b351e;
+  border-radius: 50%;
+  transform: rotate(-15deg);
+  border: .12rem solid #d8b190;
+}
+
+.footer {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.3fr .8fr 1.2fr;
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.1rem clamp(1rem, 4vw, 4rem);
+  background: rgba(2, 17, 31, .94);
+  border-top: 2px solid rgba(25,215,231,.75);
+  font-size: clamp(.95rem, 1.45vw, 1.35rem);
+  line-height: 1.35;
+}
+
+.footer span {
+  display: inline-grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: .35rem;
+  border-radius: 50%;
+  background: rgba(25,215,231,.18);
+  border: 2px solid var(--teal);
+}
+
+@media (max-width: 900px) {
+  .countdown-card { width: min(38rem, 88vw); }
+  .campus-people { min-height: 19rem; transform: scale(.82); transform-origin: bottom center; }
+  .group-professors { left: 34%; }
+  .group-laptop { left: 55%; }
+  .group-football { right: 0; }
+  .footer { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .campus-people { display: none; }
+  .headline { padding-top: 2rem; }
+  .countdown-card { width: 90vw; }
+}

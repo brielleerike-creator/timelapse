@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility Countdown</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="hero" aria-labelledby="page-title">
+    <div class="overlay"></div>
+
+    <section class="headline">
+      <p class="kicker">Building an</p>
+      <h1 id="page-title">Accessible Future</h1>
+      <p class="tagline">Together we create opportunity for <strong>everyone.</strong></p>
+      <p class="countdown-title">Countdown to April 27, 2027</p>
+
+      <section class="countdown-card" role="timer" aria-live="polite" aria-label="Days remaining until April 27, 2027">
+        <div id="days" class="days">--</div>
+        <div class="days-label">Days</div>
+      </section>
+    </section>
+
+    <section class="campus-people" aria-label="Illustration of students and faculty on campus">
+      <div class="group group-table">
+        <div class="wheelchair-student">
+          <span class="wheel"></span><span class="head"></span><span class="hair"></span><span class="body"></span>
+        </div>
+        <div class="table"></div>
+        <div class="paper"></div>
+        <div class="computer"></div>
+        <div class="student-seated">
+          <span class="head"></span><span class="hair"></span><span class="body"></span>
+        </div>
+      </div>
+
+      <div class="group group-professors">
+        <div class="professor professor-one">
+          <span class="head"></span><span class="hair"></span><span class="body"></span><span class="coffee"></span>
+        </div>
+        <div class="professor professor-two">
+          <span class="head"></span><span class="hair"></span><span class="body"></span><span class="coffee"></span>
+        </div>
+      </div>
+
+      <div class="group group-laptop">
+        <div class="student-laptop">
+          <span class="head"></span><span class="hair"></span><span class="body"></span>
+        </div>
+        <div class="laptop"></div>
+      </div>
+
+      <div class="group group-football">
+        <div class="player player-left">
+          <span class="head"></span><span class="hair"></span><span class="body"></span>
+        </div>
+        <div class="football"></div>
+        <div class="player player-right">
+          <span class="head"></span><span class="hair"></span><span class="body"></span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div><span aria-hidden="true">♿</span><strong> Equity. Access. Inclusion.</strong><br>Designing systems and spaces where every student belongs.</div>
+      <div><span aria-hidden="true">📅</span> Every day brings us closer.</div>
+      <div><span aria-hidden="true">♥</span> We are committed to accessibility in all we do.</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
